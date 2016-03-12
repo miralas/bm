@@ -1,0 +1,9 @@
+#footer
+  Powered by #{link_to "Miralas", "#", :"data-popup" => true }
+  v#{FatFreeCRM::VERSION::STRING} &copy; 2015-#{Date.today.year} by Mike Zagorulko.
+
+  - unless tabless_layout?
+    \|
+    = link_to(t(:about_ffc), "#", :title => t(:about_ffc), :onclick => "$('#about').dialog({ title: this.title, modal: true }); return false;")
+%br
+= render "layouts/about"
