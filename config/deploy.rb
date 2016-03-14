@@ -22,7 +22,7 @@ set :deploy_via, :remote_cache
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, '/var/www/bm'
-
+set :linked_files, %w{config/database.yml}
 # Default value for :scm is :git
 # set :scm, :git
 
