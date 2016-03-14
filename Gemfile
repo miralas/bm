@@ -37,9 +37,10 @@ group :development do
     gem 'thin'
     gem 'quiet_assets'
     gem 'capistrano', '~> 3.1'
-    gem 'capistrano-bundler'
-    gem 'capistrano-rails'
-    gem 'capistrano-rvm'
+    gem 'rvm-capistrano', require: false
+    # gem 'capistrano-bundler'
+    # gem 'capistrano-rails'
+    # gem 'capistrano-rvm'
     #~ gem 'capistrano-chruby'
     #~ gem 'capistrano-rbenv'
     gem 'guard'

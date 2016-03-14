@@ -58,15 +58,6 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (~> 1.3)
-    capistrano-bundler (1.1.4)
-      capistrano (~> 3.1)
-      sshkit (~> 1.2)
-    capistrano-rails (1.1.5)
-      capistrano (~> 3.1)
-      capistrano-bundler (~> 1.1)
-    capistrano-rvm (0.1.2)
-      capistrano (~> 3.0)
-      sshkit (~> 1.2)
     capybara (2.5.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -288,6 +279,8 @@ GEM
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
     rubyzip (1.1.7)
+    rvm-capistrano (1.5.0)
+      capistrano (>= 2.15.4)
     sass (3.4.20)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -363,9 +356,6 @@ DEPENDENCIES
   byebug
   cancancan
   capistrano (~> 3.1)
-  capistrano-bundler
-  capistrano-rails
-  capistrano-rvm
   capybara
   cocaine
   coffee-rails
@@ -407,6 +397,7 @@ DEPENDENCIES
   responds_to_parent
   rspec-activemodel-mocks
   rspec-rails
+  rvm-capistrano
   sass
   sass-rails
   select2-rails

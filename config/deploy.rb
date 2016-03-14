@@ -4,7 +4,7 @@
 # See MIT-LICENSE file or http://www.opensource.org/licenses/mit-license.php
 #------------------------------------------------------------------------------
 # config valid only for Capistrano 3.1
-lock '3.2.1'
+require 'rvm/capistrano'
 
 
 set :application, 'bm'
