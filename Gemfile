@@ -36,7 +36,7 @@ group :development do
   unless ENV["CI"]
     gem 'thin'
     gem 'quiet_assets'
-    gem 'capistrano', '~> 3.2.1'
+    gem 'capistrano', '~> 3.1'
     gem 'capistrano-bundler'
     gem 'capistrano-rails'
     gem 'capistrano-rvm'

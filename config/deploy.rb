@@ -3,16 +3,16 @@
 # Fat Free CRM is freely distributable under the terms of MIT license.
 # See MIT-LICENSE file or http://www.opensource.org/licenses/mit-license.php
 #------------------------------------------------------------------------------
-
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
-server "bm.ru", :app, :web, :db, :primary => true
 
 set :application, 'bm'
 set :repo_url, 'git://github.com/miralas/bm.git'
 set :user, 'www-data'
 set :default_stage, "production"
+server "bm.ru", roles: [:app, :web, :db], :primary => true
+set :scm, "git"
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 

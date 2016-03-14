@@ -362,7 +362,7 @@ DEPENDENCIES
   authlogic (>= 3.4.4)
   byebug
   cancancan
-  capistrano (~> 3.2.1)
+  capistrano (~> 3.1)
   capistrano-bundler
   capistrano-rails
   capistrano-rvm
