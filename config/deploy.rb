@@ -7,14 +7,16 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
-set :application, 'fat_free_crm'
-set :repo_url, 'git://github.com/fatfreecrm/fat_free_crm.git'
+server "bm.ru", :app, :web, :db, :primary => true
 
+set :application, 'fat_free_crm'
+set :repo_url, 'git://github.com/miralas/bm.git'
+set :user, 'www-data'
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
-# set :deploy_to, '/var/www/my_app'
+set :deploy_to, '/var/www/bm'
 
 # Default value for :scm is :git
 # set :scm, :git
