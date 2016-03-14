@@ -9,9 +9,10 @@ lock '3.2.1'
 
 server "bm.ru", :app, :web, :db, :primary => true
 
-set :application, 'fat_free_crm'
+set :application, 'bm'
 set :repo_url, 'git://github.com/miralas/bm.git'
 set :user, 'www-data'
+set :default_stage, "production"
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
