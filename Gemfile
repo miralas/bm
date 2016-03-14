@@ -2,9 +2,9 @@ source 'https://rubygems.org'
 
 # Uncomment the database that you have configured in config/database.yml
 # ----------------------------------------------------------------------
-# gem 'mysql2'
+gem 'mysql2'
 # gem 'sqlite3'
-gem 'pg'
+# gem 'pg'
 
 # Removes a gem dependency
 def remove(name)
@@ -36,7 +36,7 @@ group :development do
   unless ENV["CI"]
     gem 'thin'
     gem 'quiet_assets'
-    gem 'capistrano', '~> 3.1'
+    gem 'capistrano', '~> 2.15'
     gem 'rvm-capistrano', require: false
     # gem 'capistrano-bundler'
     # gem 'capistrano-rails'

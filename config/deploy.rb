@@ -5,14 +5,18 @@
 #------------------------------------------------------------------------------
 # config valid only for Capistrano 3.1
 require 'rvm/capistrano'
+require 'bundler/capistrano'
 
-
+set :rvm_path, '/usr/local/rvm'
+set :rvm_ruby_string, 'ruby-2.2.1'
 set :application, 'bm'
-set :repo_url, 'git://github.com/miralas/bm.git'
-set :user, 'www-data'
+set :repository, 'git://github.com/miralas/bm.git'
+set :user, 'miralas'
+set :use_sudo, false
 set :default_stage, "production"
-server "bm.ru", roles: [:app, :web, :db], :primary => true
+server "37.143.16.58:5015", :app, :web, :db, :primary => true
 set :scm, "git"
+set :deploy_via, :remote_cache
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
@@ -43,38 +47,38 @@ set :linked_files, %w(config/database.yml config/settings.yml)
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-set :rvm_ruby_version, '2.1.5'
+set :rvm_ruby_version, '2.2.1'
 
-namespace :deploy do
-  desc 'Restart application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      # Your restart mechanism here, for example:
-      # execute :touch, release_path.join('tmp/restart.txt')
-    end
-  end
+# namespace :deploy do
+#   desc 'Restart application'
+#   task :restart do
+#     on roles(:app), in: :sequence, wait: 5 do
+#       # Your restart mechanism here, for example:
+#       # execute :touch, release_path.join('tmp/restart.txt')
+#     end
+#   end
 
-  after :publishing, :restart
+#   after :publishing, :restart
 
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
-    end
-  end
-end
+#   after :restart, :clear_cache do
+#     on roles(:web), in: :groups, limit: 3, wait: 10 do
+#       # Here we can do anything such as:
+#       # within release_path do
+#       #   execute :rake, 'cache:clear'
+#       # end
+#     end
+#   end
+# end
 
 # cap production invoke[db:migrate]
 # cap production invoke[db:reset]
-desc "Invoke a rake command on the remote server: cap production invoke[db:migrate]"
-task :invoke, [:command] => 'deploy:set_rails_env' do |_task, args|
-  on primary(:app) do
-    within current_path do
-      with rails_env: fetch(:rails_env) do
-        rake args[:command]
-      end
-    end
-  end
-end
+# desc "Invoke a rake command on the remote server: cap production invoke[db:migrate]"
+# task :invoke, [:command] => 'deploy:set_rails_env' do |_task, args|
+#   on primary(:app) do
+#     within current_path do
+#       with rails_env: fetch(:rails_env) do
+#         rake args[:command]
+#       end
+#     end
+#   end
+# end
