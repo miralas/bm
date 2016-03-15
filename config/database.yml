@@ -6,7 +6,7 @@ development: &development
   encoding: utf8
   host: 37.143.16.58
   username: root
-  password: miralas777
+  password: miralas
 
 # production: &production
 #   adapter: mysql2
