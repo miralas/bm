@@ -49,6 +49,13 @@ set :keep_releases, 5
 
 after "deploy:restart", "deploy:cleanup"
 
+desc "Open the rails console on one of the remote servers"
+task :console, :roles => :app do
+  hostname = find_servers_for_task(current_task).first
+  port = exists?(:port) ? fetch(:port) : 22
+  exec "ssh -l #{user} #{hostname} -p #{5015} -t '#{current_path}/script/rails c #{rails_env}'"
+end
+
 namespace :deploy do
   task :start, :roles => :app do
     run "touch #{current_path}/tmp/restart.txt"
