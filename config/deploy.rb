@@ -13,7 +13,6 @@ set :application, 'bm'
 set :repository, 'git://github.com/miralas/bm.git'
 set :user, 'miralas'
 set :use_sudo, false
-set :default_stage, "production"
 server "37.143.16.58:5015", :app, :web, :db, :primary => true
 set :scm, "git"
 set :deploy_via, :remote_cache
@@ -30,7 +29,7 @@ set :deploy_to, '/var/www/bm'
 # set :format, :pretty
 
 # Default value for :log_level is :debug
-# set :log_level, :debug
+set :log_level, :debug
 
 # Default value for :pty is false
 # set :pty, true
@@ -39,7 +38,7 @@ set :deploy_to, '/var/www/bm'
 set :linked_files, %w(config/database.yml config/settings.yml)
 
 # Default value for linked_dirs is []
-# set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system config}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
