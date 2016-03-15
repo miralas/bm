@@ -50,8 +50,17 @@ set :keep_releases, 5
 set :rvm_ruby_version, '2.2.1'
 
 namespace :deploy do
-  task :restart, :roles => :web do
-    run "touch #{ current_path }/tmp/restart.txt"
+  task :start, :roles => :app do
+    run "touch #{current_path}/tmp/restart.txt"
+  end
+
+  task :stop, :roles => :app do
+    # Do nothing.
+  end
+
+  desc "Restart Application"
+  task :restart, :roles => :app do
+    run "touch #{current_path}/tmp/restart.txt"
   end
 end
 # namespace :deploy do
