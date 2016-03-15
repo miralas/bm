@@ -49,6 +49,11 @@ set :linked_files, %w(config/database.yml config/settings.yml)
 
 set :rvm_ruby_version, '2.2.1'
 
+namespace :deploy do
+  task :restart, :roles => :web do
+    run "touch #{ current_path }/tmp/restart.txt"
+  end
+end
 # namespace :deploy do
 #   desc 'Restart application'
 #   task :restart do
