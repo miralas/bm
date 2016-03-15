@@ -44,7 +44,7 @@ production:
 # #
 # :host: ""
 
-# :secret_token: '85172605030a8225c083d886d066da2cb4aac1f0'
+ :secret_token: '85172605030a8225c083d886d066da2cb4aac1f0'
 
 # # Base URL
 # #------------------------------------------------------------------------------
@@ -63,7 +63,7 @@ production:
 # #------------------------------------------------------------------------------
 # # Default locale is American English.
 # #
-# :locale: "ru"
+ :locale: "ru"
 
 
 # # Settings for outgoing email (SMTP)
