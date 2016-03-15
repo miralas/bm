@@ -8,13 +8,13 @@ development: &development
   username: root
   password: miralas
 
-# production: &production
-#   adapter: mysql2
-#   encoding: utf8
-#   pool: 5
-#   username: root
-#   password: miralas777
-#   socket: /var/run/mysqld/mysqld.sock
+production: &production
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: miralas
+  socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
