@@ -47,7 +47,7 @@ set :linked_files, %w(config/database.yml config/settings.yml)
 # Default value for keep_releases is 5
 set :keep_releases, 5
 
-set :rvm_ruby_version, '2.2.1'
+after "deploy:restart", "deploy:cleanup"
 
 namespace :deploy do
   task :start, :roles => :app do
