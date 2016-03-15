@@ -13,7 +13,7 @@ production:
   database: bm_production
   pool: 5
   username: root
-  password:
+  password: miralas777
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
