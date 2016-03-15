@@ -66,47 +66,47 @@
 # # Settings for outgoing email (SMTP)
 # # Uncomment to set up for your specific mailer
 # #------------------------------------------------------------------------------
-# #:smtp:
-#   #:address                    : ""        # e.g. smtp.gmail.com
-#   #:from                       : ""        # e.g. no-reply@your-domain.com
-#   #:enable_starttls_auto       : true
-#   #:port                       : "587"
-#   #:authentication             : :plain
-#   #:user_name                  : ""
-#   #:password                   : ""
+#:smtp:
+  #:address                    : ""        # e.g. smtp.gmail.com
+  #:from                       : ""        # e.g. no-reply@your-domain.com
+  #:enable_starttls_auto       : true
+  #:port                       : "587"
+  #:authentication             : :plain
+  #:user_name                  : ""
+  #:password                   : ""
 
 # # Settings for the Email dropbox (IMAP)
 # # - Connection settings for the IMAP account, server and folders.
 # #------------------------------------------------------------------------------
-# :email_dropbox:
-#   :server                     : ""        # IMAP server name.
-#   :port                       : ""        # IMAP server port number.
-#   :ssl                        : ""        # True for secure IMAP connection, false othewise.
-#   :address                    : ""        # Dropbox email address.
-#   :user                       : ""        # User to login to the IMAP server.
-#   :password                   : ""        # Password to login to the IMAP server.
-#   :scan_folder                : ""        # Folder to scan for dropbox messages.
-#   :attach_to_account          : ""        # Attach emails to contact's account, if any.
-#                                           # (The rule above also applies to opportunities.)
-# #  :address_aliases:                      # Optional: List any aliases that you also want to
-# #    - example_alias@example.com          #           ignore when scanning recipients
-# #  :move_to_folder            : ""        # Optional: folder to move processed messages to.
-# #  :move_invalid_to_folder    : ""        # Optional: folder to move invalid messages to.
+:email_dropbox:
+  :server                     : ""        # IMAP server name.
+  :port                       : ""        # IMAP server port number.
+  :ssl                        : ""        # True for secure IMAP connection, false othewise.
+  :address                    : ""        # Dropbox email address.
+  :user                       : ""        # User to login to the IMAP server.
+  :password                   : ""        # Password to login to the IMAP server.
+  :scan_folder                : ""        # Folder to scan for dropbox messages.
+  :attach_to_account          : ""        # Attach emails to contact's account, if any.
+                                          # (The rule above also applies to opportunities.)
+#  :address_aliases:                      # Optional: List any aliases that you also want to
+#    - example_alias@example.com          #           ignore when scanning recipients
+#  :move_to_folder            : ""        # Optional: folder to move processed messages to.
+#  :move_invalid_to_folder    : ""        # Optional: folder to move invalid messages to.
 
 
 
 # # Settings for 'Reply via email' inbox (IMAP)
 # #------------------------------------------------------------------------------
-# :email_comment_replies:
-#   :server                     : ""        # IMAP server name.
-#   :port                       : ""        # IMAP server port number.
-#   :ssl                        : ""        # True for secure IMAP connection, false othewise.
-#   :address                    : ""        # Comment reply email address.
-#   :user                       : ""        # User to login to the IMAP server.
-#   :password                   : ""        # Password to login to the IMAP server.
-#   :scan_folder                : ""        # Folder to scan for comment replies.
-# #  :move_to_folder            : ""        # Optional: folder to move processed messages to.
-# #  :move_invalid_to_folder    : ""        # Optional: folder to move invalid messages to.
+:email_comment_replies:
+  :server                     : ""        # IMAP server name.
+  :port                       : ""        # IMAP server port number.
+  :ssl                        : ""        # True for secure IMAP connection, false othewise.
+  :address                    : ""        # Comment reply email address.
+  :user                       : ""        # User to login to the IMAP server.
+  :password                   : ""        # Password to login to the IMAP server.
+  :scan_folder                : ""        # Folder to scan for comment replies.
+#  :move_to_folder            : ""        # Optional: folder to move processed messages to.
+#  :move_invalid_to_folder    : ""        # Optional: folder to move invalid messages to.
 
 
 # # Individual locales per user
@@ -115,7 +115,7 @@
 # # By default, individual users can't pick their own locale and are presented
 # # with the default locale.
 # #
-# :per_user_locale: false
+:per_user_locale: false
 
 
 # # Default records permissions
@@ -125,7 +125,7 @@
 # #   Public  -- public access, share with everyone. This is the default.
 # #   Shared  -- shared with selected accounts, should be selected by the user.
 # #
-# :default_access: "Public"
+:default_access: "Public"
 
 
 # # User Signup
@@ -135,7 +135,7 @@
 # #   :not_allowed    -- users can only be added by system administrator. This is the default.
 # #   :needs_approval -- users can sign up but must be approved before they can use the system.
 # #
-# :user_signup: :not_allowed
+:user_signup: :not_allowed
 
 
 # # Address format
@@ -144,7 +144,7 @@
 # #   true  -- use separate street1, street2, city, state, zipcode, and country field.  (default)
 # #   false -- use single text area field to enter the entire address.
 # #
-# :compound_address: true
+:compound_address: true
 
 
 # # Dropdown calendar format
@@ -154,20 +154,20 @@
 # #   true  -- allow selecting date and time.  (default)
 # #   false -- allow selecting date only.
 # #
-# :task_calendar_with_time: true
+:task_calendar_with_time: true
 
 
 # # Enable/disable first/last name validations on Leads and Contacts
 # #------------------------------------------------------------------------------
 # #
-# :require_first_names: true
-# :require_last_names:  true
+:require_first_names: true
+:require_last_names:  true
 
 # # Enable/disable name validation on Accounts
 # :require_unique_account_names: true
 
 # # Show comments on dashboard
-# :comments_visible_on_dashboard: false
+:comments_visible_on_dashboard: false
 
 # # Background information
 # #------------------------------------------------------------------------------
@@ -187,7 +187,7 @@
 # #
 # # By default, no background information is shown.
 # #
-# :background_info: []
+:background_info: []
 
 # # Priority countries
 # #------------------------------------------------------------------------------
@@ -197,70 +197,70 @@
 
 # # Main and Admin Tabs
 # #------------------------------------------------------------------------------
-# :tabs:
-# - :active: true
-#   :text: :tab_dashboard
-#   :icon: :fa-dashboard
-#   :url:
-#     :controller: home
-# - :active: false
-#   :text: :tab_tasks
-#   :icon: :fa-check-square-o
-#   :url:
-#     :controller: tasks
-# - :active: false
-#   :text: :tab_campaigns
-#   :icon: :fa-bar-chart-o
-#   :url:
-#     :controller: campaigns
-# - :active: false
-#   :text: :tab_leads
-#   :icon: :fa-tasks
-#   :url:
-#     :controller: leads
-# - :active: false
-#   :text: :tab_accounts
-#   :icon: :fa-users
-#   :url:
-#     :controller: accounts
-# - :active: false
-#   :text: :tab_contacts
-#   :icon: :fa-user
-#   :url:
-#     :controller: contacts
-# - :active: false
-#   :text: :tab_opportunities
-#   :icon: :fa-money
-#   :url:
-#     :controller: opportunities
-# - :active: false
-#   :text: :tab_team
-#   :icon: :fa-globe
-#   :url:
-#     :controller: users
-#     :action: opportunities_overview
+:tabs:
+- :active: true
+  :text: :tab_dashboard
+  :icon: :fa-dashboard
+  :url:
+    :controller: home
+- :active: false
+  :text: :tab_tasks
+  :icon: :fa-check-square-o
+  :url:
+    :controller: tasks
+- :active: false
+  :text: :tab_campaigns
+  :icon: :fa-bar-chart-o
+  :url:
+    :controller: campaigns
+- :active: false
+  :text: :tab_leads
+  :icon: :fa-tasks
+  :url:
+    :controller: leads
+- :active: false
+  :text: :tab_accounts
+  :icon: :fa-users
+  :url:
+    :controller: accounts
+- :active: false
+  :text: :tab_contacts
+  :icon: :fa-user
+  :url:
+    :controller: contacts
+- :active: false
+  :text: :tab_opportunities
+  :icon: :fa-money
+  :url:
+    :controller: opportunities
+- :active: false
+  :text: :tab_team
+  :icon: :fa-globe
+  :url:
+    :controller: users
+    :action: opportunities_overview
 
-# :admin_tabs:
-# - :active: true
-#   :text: :admin_tab_users
-#   :icon: :fa-user
-#   :url:
-#     :controller: admin/users
-# - :active: true
-#   :text: :admin_tab_groups
-#   :icon: :fa-users
-#   :url:
-#     :controller: admin/groups
-# - :active: false
-#   :text: :admin_tab_fields
-#   :icon: :fa-list-alt
-#   :url:
-#     :controller: admin/fields
-# - :active: false
-#   :text: :admin_tab_tags
-#   :icon: :fa-tags
-#   :url:
-#     :controller: admin/tags
+:admin_tabs:
+- :active: true
+  :text: :admin_tab_users
+  :icon: :fa-user
+  :url:
+    :controller: admin/users
+- :active: true
+  :text: :admin_tab_groups
+  :icon: :fa-users
+  :url:
+    :controller: admin/groups
+- :active: false
+  :text: :admin_tab_fields
+  :icon: :fa-list-alt
+  :url:
+    :controller: admin/fields
+- :active: false
+  :text: :admin_tab_tags
+  :icon: :fa-tags
+  :url:
+    :controller: admin/tags
 # #- :active: false
 # #  :text: :admin_tab_settings
 # #  :icon: :fa-cogs
@@ -278,21 +278,21 @@
 # #   - "Custom"
 # #
 # #------------------------------------------------------------------------------
-# account_category:
-#   - :affiliate
-#   - :competitor
-#   - :customer
-#   - :partner
-#   - :reseller
-#   - :vendor
+account_category:
+  - :affiliate
+  - :competitor
+  - :customer
+  - :partner
+  - :reseller
+  - :vendor
 
-# account_category_color:
-#   :affiliate   : lavender
-#   :competitor  : paleturquoise
-#   :customer    : pink
-#   :partner     : bisque
-#   :reseller    : thistle
-#   :vendor      : skyblue
+account_category_color:
+  :affiliate   : lavender
+  :competitor  : paleturquoise
+  :customer    : pink
+  :partner     : bisque
+  :reseller    : thistle
+  :vendor      : skyblue
 
 # # Campaign Status. To add custom status use string value, for example:
 # #
@@ -300,102 +300,102 @@
 # #   - "Custom"
 # #
 # #------------------------------------------------------------------------------
-# campaign_status:
-#   - :planned
-#   - :started
-#   - :completed
-#   - :on_hold
-#   - :called_off
+campaign_status:
+  - :planned
+  - :started
+  - :completed
+  - :on_hold
+  - :called_off
 
-# campaign_status_color:
-#   :planned    : Gold
-#   :started    : Turquoise
-#   :completed  : Lime
-#   :on_hold    : Orchid
-#   :called_off : OrangeRed
+campaign_status_color:
+  :planned    : Gold
+  :started    : Turquoise
+  :completed  : Lime
+  :on_hold    : Orchid
+  :called_off : OrangeRed
 
 # # Lead Status and Source.
 # #------------------------------------------------------------------------------
-# lead_status:
-#   - :new
-#   - :contacted
-#   - :converted
-#   - :rejected
+lead_status:
+  - :new
+  - :contacted
+  - :converted
+  - :rejected
 
-# lead_status_color:
-#   :new       : Silver
-#   :contacted : Turquoise
-#   :converted : Lime
-#   :rejected  : OrangeRed
+lead_status_color:
+  :new       : Silver
+  :contacted : Turquoise
+  :converted : Lime
+  :rejected  : OrangeRed
 
-# lead_source:
-#   - :campaign
-#   - :cold_call
-#   - :conference
-#   - :online
-#   - :referral
-#   - :self
-#   - :web
-#   - :word_of_mouth
-#   - :other
+lead_source:
+  - :campaign
+  - :cold_call
+  - :conference
+  - :online
+  - :referral
+  - :self
+  - :web
+  - :word_of_mouth
+  - :other
 
 # # Opportunity Stage.
 # #------------------------------------------------------------------------------
 # opportunity_default_stage: :prospecting
-# opportunity_stage:
-#   - :prospecting
-#   - :analysis
-#   - :presentation
-#   - :proposal
-#   - :negotiation
-#   - :final_review
-#   - :won
-#   - :lost
+opportunity_stage:
+  - :prospecting
+  - :analysis
+  - :presentation
+  - :proposal
+  - :negotiation
+  - :final_review
+  - :won
+  - :lost
 
-# opportunity_stage_color:
-#   :prospecting  : Silver
-#   :analysis     : PaleGoldenRod
-#   :presentation : Salmon
-#   :proposal     : Gold
-#   :negotiation  : Orchid
-#   :final_review : Turquoise
-#   :won          : Lime
-#   :lost         : OrangeRed
+opportunity_stage_color:
+  :prospecting  : Silver
+  :analysis     : PaleGoldenRod
+  :presentation : Salmon
+  :proposal     : Gold
+  :negotiation  : Orchid
+  :final_review : Turquoise
+  :won          : Lime
+  :lost         : OrangeRed
 
 # # Task Category, Due Date, and Completed Date.
 # #------------------------------------------------------------------------------
-# task_category:
-#   - :call
-#   - :email
-#   - :follow_up
-#   - :lunch
-#   - :meeting
-#   - :money
-#   - :presentation
-#   - :trip
+task_category:
+  - :call
+  - :email
+  - :follow_up
+  - :lunch
+  - :meeting
+  - :money
+  - :presentation
+  - :trip
 
-# task_category_color:
-#   :call         : Silver
-#   :email        : Turquoise
-#   :follow_up    : Gold
-#   :lunch        : Tomato
-#   :meeting      : Orchid
-#   :money        : Lime
-#   :presentation : Salmon
-#   :trip         : Turquoise
+task_category_color:
+  :call         : Silver
+  :email        : Turquoise
+  :follow_up    : Gold
+  :lunch        : Tomato
+  :meeting      : Orchid
+  :money        : Lime
+  :presentation : Salmon
+  :trip         : Turquoise
 
-# task_bucket:
-#   - :overdue
-#   - :due_asap
-#   - :due_today
-#   - :due_tomorrow
-#   - :due_this_week
-#   - :due_next_week
-#   - :due_later
+task_bucket:
+  - :overdue
+  - :due_asap
+  - :due_today
+  - :due_tomorrow
+  - :due_this_week
+  - :due_next_week
+  - :due_later
 
-# task_completed:
-#   - :completed_today
-#   - :completed_yesterday
-#   - :completed_last_week
-#   - :completed_this_month
-#   - :completed_last_month
+task_completed:
+  - :completed_today
+  - :completed_yesterday
+  - :completed_last_week
+  - :completed_this_month
+  - :completed_last_month
