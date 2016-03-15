@@ -68,6 +68,8 @@ module FatFreeCRM
     config.filter_parameters += [:password, :password_hash, :password_salt, :password_confirmation]
 
     config.active_record.raise_in_transactional_callbacks = true
+    config.secret_key_base = '85172605030a8225c083d886d066da2cb4aac1f0'
+
   end
 end
 

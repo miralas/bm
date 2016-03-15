@@ -62,6 +62,6 @@ if defined?(FatFreeCRM::Application)
 
     # Do not dump schema after migrations.
     config.active_record.dump_schema_after_migration = false
-    config.secret_key_base = Rails.application.secrets.secret_key_base
+    config.secret_key_base = Settings.secret_key_base
   end
 end
