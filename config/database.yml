@@ -2,30 +2,30 @@
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
 ---
 development: &development
-  adapter: sqlite3
-  database: db/baltika_meb.sqlite3
-  pool: 5
-  timeout: 5000
-
-production:
   adapter: mysql2
   encoding: utf8
-  database: bm_production
-  pool: 5
+  host: 127.0.0.1
   username: root
   password: miralas777
-  socket: /var/run/mysqld/mysqld.sock
+
+# production: &production
+#   adapter: mysql2
+#   encoding: utf8
+#   pool: 5
+#   username: root
+#   password: miralas777
+#   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *development
-  database: db/baltika_meb.sqlite3
+  database: bm_production
 
-# production:
-#   <<: *development
-#   database: db/baltika_meb.sqlite3
+production:
+  <<: *development
+  database: bm_production
 
 # staging:
 #   <<: *development
